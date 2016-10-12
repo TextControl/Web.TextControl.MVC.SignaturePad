@@ -1,0 +1,42 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#signaturePad .modal-content {
+    min-width: 582px;
+    max-width: 582px;
+}
+
+.softpad {
+    border: 4px solid #c2c2c2;
+    background-color: white;
+    cursor: crosshair;
+    background-image: url("../images/animate_sign.gif");
+    opacity: 0.8;
+    -webkit-transition-property: opacity 0.3s ease-in 200ms;
+    -moz-transition-property: opacity 0.3s ease-in 200ms;
+    -o-transition-property: opacity 0.3s ease-in 200ms;
+    transition: opacity 0.3s ease-in 200ms;
+}
+
+.softpad:hover {
+    opacity: 1;
+}
+
+.softpad-hover-after {
+    background-image: none;
+}

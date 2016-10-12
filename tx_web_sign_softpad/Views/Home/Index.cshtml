@@ -1,0 +1,100 @@
+﻿@using TXTextControl.Web
+@using TXTextControl.Web.MVC
+
+<script src="~/Scripts/app/softpadsignature.js"></script>
+
+@Html.TXTextControl().TextControl(settings =>
+{
+    settings.Dock = DockStyle.Window;
+    settings.EditMode = EditMode.ReadOnly;
+}).LoadText(Server.MapPath("/App_Data/nda_contract.tx"), StreamType.InternalUnicodeFormat).Render()
+
+<!-- Modal -->
+<div id="signaturePad" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Sign the document</h4>
+            </div>
+            <div class="modal-body">
+                <input placeholder="Type in your name" type="text" class="form-control" id="name" /><br />
+                <canvas class="softpad" id="softpad" width="538" height="200"></canvas>
+                <button type="button" class="btn btn-default" id="clr" onclick="erase()">Clear</button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick="signDocument()">Sign Document</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+        init();
+    });
+
+    function signDocument() {
+
+        // save the document
+        TXTextControl.saveDocument(TXTextControl.streamType.InternalUnicodeFormat, function (e) {
+
+            var serviceURL = "/Home/SignDocument";
+
+            // pass the saved document to the controller method
+            // "SignDocument"
+            $.ajax({
+                type: "POST",
+                url: serviceURL,
+                contentType: 'application/json',
+                data: JSON.stringify({
+                    BinaryDocument: e.data,
+                    BinarySignature: save(),
+                    Name: $('#name').val()
+                }),
+                success: successFunc,
+                error: errorFunc
+            });
+
+            // load the signed document back into the editor
+            function successFunc(data, status) {
+                TXTextControl.loadDocument(TXTextControl.streamType.InternalUnicodeFormat, data);
+            }
+
+            function errorFunc() {
+                alert('An error occured while signing the document. Please try again.');
+            }
+        });
+    }
+
+    // add a new ribbon group "Document" with a "Sign" button
+    TXTextControl.addEventListener("ribbonTabsLoaded", function (e) {
+
+        var sSignGroupHTML = "<div class='ribbon-group' id='ribbonGroupSign'>" +
+            "<div class='ribbon-group-content'>" +
+            "<div data-toggle='modal' data-target='#signaturePad' class='ribbon-button ribbon-button-big' id='btnSign'>" +
+            "<div class='ribbon-button-big-image-container'>" +
+            "<img src='/icons/sign.png' class='ribbon-button-big-image'>" +
+            "</div>" +
+            "<div class='ribbon-button-big-label-container'>" +
+            "<p class='ribbon-button-label'>Sign</p>" +
+            "</div>" +
+            "</div>" +
+            "</div>" +
+            "<div class='ribbon-group-label-container'>" +
+            "<p class='ribbon-group-label'>Document</p>" +
+            "</div>" +
+            "</div>";
+
+        $("#ribbonTabHome").prepend(sSignGroupHTML);
+
+    });
+
+</script>
+
+
