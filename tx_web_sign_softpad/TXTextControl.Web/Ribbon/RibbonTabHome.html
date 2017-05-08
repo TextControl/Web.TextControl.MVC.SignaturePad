@@ -2,8 +2,20 @@
 
 <div class="ribbon-group" id="ribbonGroupClipboard">
 	<div class="ribbon-group-content">
+		<!-- "Paste Source" toggle button -->
+		<div id="localClipBrdTglBtnContainer" style="display: inline-block; float: left; border-right: 1px solid #bbbbbb; margin-right: 5px">
+			<div class="ribbon-button ribbon-button-big ribbon-button-selected" id="tglBtnLocalClipboard">
+				<div class="ribbon-button-big-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/clientpaste.png">
+				</div>
+				<div class="ribbon-button-big-label-container">
+					<p class="ribbon-button-label"><!-- Local<br />Clipboard --></p>
+				</div>
+			</div>
+		</div>
+
 		<!-- Paste button -->
-		<div class="ribbon-button ribbon-button-big" id="drpDnBtnPaste">
+		<div class="ribbon-button ribbon-button-big" id="btnPaste">
 			<div class="ribbon-button-big-image-container">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/paste.png">
 			</div>
@@ -91,16 +103,12 @@
 					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/fontcolor.png">
 				</div>
 			</div>
-			<div class="ribbon-group-button-group">
-				<div class="ribbon-button ribbon-button-tiny" id="btnCharacterSettings">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/charactersettings.png">
-				</div>
-			</div>
 		</div>
 	</div>
 	<div class="ribbon-group-label-container">
-		<p class="ribbon-group-label"><!-- Font --></p>
+		<p class="ribbon-group-label"><!-- Font --></p>		
 	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchFontGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-- Paragraph group -->
@@ -180,11 +188,14 @@
 				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnBorders">
 					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbox.png">
 				</div>
-			</div>
-
-			<div class="ribbon-group-button-group">
-				<div class="ribbon-button ribbon-button-tiny" id="btnParSettings">
-					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/paragraphsettings.png">
+				<div class="ribbon-button ribbon-button-tiny" id="btnParBackColor">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/paragraphbackcolor.png">
+				</div>
+				<div class="ribbon-button ribbon-button-tiny" id="btnFrameLineColor">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/tablelinecolor.png">
+				</div>
+				<div class="ribbon-button ribbon-dropdown-button-tiny" id="drpDnBtnFrameLineWidth">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/tablelinewidth.png">
 				</div>
 			</div>
 		</div>
@@ -192,6 +203,7 @@
 	<div class="ribbon-group-label-container">
 		<p class="ribbon-group-label"><!-- Paragraph --></p>
 	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchParGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-- Styles group -->
@@ -284,7 +296,7 @@
 <!-- Paste dropdown menu -->
 <ul id="pasteDropDown" class="dropDownMenu">
 	<!-- Server Paste -->
-	<li id="mnuItemServerPaste" class="ui-state-disabled">
+	<li id="mnuItemServerPaste" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/paste.png">
@@ -311,7 +323,7 @@
 
 <!-- Underline styles dropdown menu -->
 <ul id="ulStylesDropDown" class="dropDownMenu">
-	<li id="mnuItmULStyleSingle">
+	<li id="mnuItemULStyleSingle">
 		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleSingle">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
@@ -321,7 +333,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleDoubled">
+	<li id="mnuItemULStyleDoubled">
 		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleDoubled">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
@@ -331,7 +343,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleSingleWO">
+	<li id="mnuItemULStyleSingleWO">
 		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleSingleWO">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
@@ -341,7 +353,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItmULStyleDoubledWO">
+	<li id="mnuItemULStyleDoubledWO">
 		<a>
 			<div class="ribbon-button ribbon-button-tiny ribbon-button-checkmark" id="tglBtnULStyleDoubledWO">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/checkmark.png">
@@ -688,6 +700,100 @@
 			</div>
 			<div class="small-menu-item-caption-container">
 				<p><!-- 3.0 --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!-- Frame Line width dropdown menu -->
+<ul id="frameLineWidthDropDown" class="dropDownMenu">
+	<li id="mnuItemFrameLineWidth_0_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight025.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_0_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight050.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_0_75">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_0_75">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight075.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.75 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_1_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_1_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight100.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_1_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_1_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight150.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_2_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_2_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight225.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 2.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_3_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_3_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight300.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 3.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_4_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_4_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight450.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 4.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemFrameLineWidth_6_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnFrameLineWidth_6_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight600.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 6.0 --></p>
 			</div>
 		</a>
 	</li>

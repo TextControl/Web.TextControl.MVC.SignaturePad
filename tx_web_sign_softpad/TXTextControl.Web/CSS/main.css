@@ -17,6 +17,16 @@
 
 #txTemplateDesignerContainer img {
     border: none;
+	 vertical-align: baseline !important;
+}
+
+#txTemplateDesignerContainer td {
+	padding: 1px;
+}
+
+#txTemplateDesignerContainer table {
+	border-spacing: 2px;
+	margin: 0px;
 }
 
 #txTemplateDesignerContainer ul.tabs {
@@ -94,6 +104,20 @@
     border-right-color: #E67FFE;
 }
 
+#txTemplateDesignerContainer #tabFrameFormatting {
+    color: #E67FFE !important;
+}
+
+#txTemplateDesignerContainer #tabFrameFormatting:not(.selected):hover {
+    background-color: rgba(206, 0, 255, 0.1)
+}
+
+#txTemplateDesignerContainer #tabFrameFormatting.selected {
+    border-left-color: #E67FFE;
+    border-top-color: #E67FFE;
+    border-right-color: #E67FFE;
+}
+
 #txTemplateDesignerContainer #tabShapeFormat {
     color: #FFB000 !important;
 }
@@ -139,6 +163,14 @@
     height: 65px;
 }
 
+#txTemplateDesignerContainer div.ribbon-group-content input[type=number] {
+	padding: 1px 0px;
+	margin: 0px;
+	border: 1px solid #ababab;
+	font-size: 13px;
+	padding: 2px 1px;
+}
+
 /* General ribbon button properties */
 
 #txTemplateDesignerContainer div.ribbon-button {
@@ -151,12 +183,12 @@
 }
 
 /* Enabled button hover style */
-#txTemplateDesignerContainer div.ribbon-button:not(.ui-state-disabled):hover {
+#txTemplateDesignerContainer div.ribbon-button:not(.txui-state-disabled):hover {
     background-color: #D5E1F2
 }
 
 /* Enabled button style while mouse button is clicked and held down */
-#txTemplateDesignerContainer div.ribbon-button:not(.ui-state-disabled):active {
+#txTemplateDesignerContainer div.ribbon-button:not(.txui-state-disabled):active {
     background-color: #A3BDE3;
 }
 
@@ -166,12 +198,12 @@
 }
 
 /* "Selected" (toggled) button hover style */
-#txTemplateDesignerContainer div.ribbon-button-selected:not(.ui-state-disabled):hover {
+#txTemplateDesignerContainer div.ribbon-button-selected:not(.txui-state-disabled):hover {
     background-color: #D5E1F2;
 }
 
 /* "Selected" (toggled) button style while mouse button is clicked and held down */
-#txTemplateDesignerContainer div.ribbon-button-selected:not(.ui-state-disabled):active {
+#txTemplateDesignerContainer div.ribbon-button-selected:not(.txui-state-disabled):active {
     background-color: #A3BDE3;
 }
 
@@ -249,7 +281,7 @@
 #txTemplateDesignerContainer div.ribbon-button-small-label-container {
     float: left;
     pointer-events: none;
-    margin-top: 3px;
+    margin-top: 2px;
 }
 
 #txTemplateDesignerContainer div.ribbon-button-wrapper-small-stacked-buttons {
@@ -366,7 +398,7 @@
 /* Menu item stuff */
 
 /* jquery menus */
-#txTemplateDesignerContainer ul.ui-menu {
+#txTemplateDesignerContainer ul.txui-menu {
     background-image: none;
     border-radius: 0px;
     border: 1px solid #ABABAB;
@@ -374,7 +406,7 @@
 }
 
 /* jquery menu list items */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item {
+#txTemplateDesignerContainer ul.txui-menu li.txui-menu-item {
     font-size: 11px;
     display: block;
     /* height: 0px; */
@@ -384,21 +416,21 @@
 }
 
 /* Symbol menu special treatment */
-#insertSymbolDropDown li.ui-menu-item {
+#insertSymbolDropDown li.txui-menu-item {
     height: auto;
 }
 
-#shapeStylesDropDown li.ui-menu-item {
+#shapeStylesDropDown li.txui-menu-item {
    float: left;
    width: auto;
 }
 
-#shapeStylesDropDown li.ui-menu-item img {
+#shapeStylesDropDown li.txui-menu-item img {
    margin: 2px;
 }
 
 /* Anchor tags in jquery menu items */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item a {
+#txTemplateDesignerContainer ul.txui-menu li.txui-menu-item a {
     padding: 0px;
     clear: right;
     float: left;
@@ -407,22 +439,8 @@
     overflow: hidden;
 }
 
-/* Anchor tags in merge field and merge block menu items which are highlighted 
-	because they fit into the current merge context */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item a.merge-highlight {
-	background-image: none;
-	background-color: rgba(255, 176, 0, 0.57);
-}
-
-/* Active anchor tags in merge field and merge block menu items which are highlighted 
-	because they fit into the current merge context */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item a.ui-state-focus.merge-highlight {
-	background-image: none;
-	background-color: rgba(255, 145, 0, 0.57);
-}
-
 /* Hovered anchor tags in jquery menu items */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item a.ui-state-focus {
+#txTemplateDesignerContainer ul.txui-menu li.txui-menu-item a.txui-state-focus {
     border: none;
     margin: 0px;
     background-image: none;
@@ -431,7 +449,7 @@
 }
 
 /* Active anchor tags in jquery menu items */
-#txTemplateDesignerContainer ul.ui-menu li.ui-menu-item a.ui-state-active {
+#txTemplateDesignerContainer ul.txui-menu li.txui-menu-item a.txui-state-active {
     border: none;
     margin: 0px;
     background-image: none;
@@ -440,7 +458,7 @@
 }
 
 /* DIV around large menu item image (32px, e. g. in file menu or under drop down buttons) */
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-image-container {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-image-container {
     float: left; 
     overflow: hidden; 
     width: 32px; 
@@ -450,7 +468,7 @@
     margin-left: 3px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-image-container-long-caption {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-image-container-long-caption {
     float: left; 
     overflow: hidden; 
     width: 32px; 
@@ -460,39 +478,39 @@
     margin-left: 3px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.menu-item-caption-container-42px {
+#txTemplateDesignerContainer .txui-menu div.menu-item-caption-container-42px {
     float: left; 
     margin-left: 5px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.menu-item-caption-container-42px p {
+#txTemplateDesignerContainer .txui-menu div.menu-item-caption-container-42px p {
     margin-top: 16px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.menu-item-caption-container-numbered-list {
+#txTemplateDesignerContainer .txui-menu div.menu-item-caption-container-numbered-list {
     float: left; 
     margin-left: 10px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.menu-item-caption-container-numbered-list p {
+#txTemplateDesignerContainer .txui-menu div.menu-item-caption-container-numbered-list p {
     margin-top: 36px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-caption-container {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-caption-container {
     float: left; 
     font-family: Arial, Helvetica, sans-serif !important;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-caption-container p {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-caption-container p {
     margin: 11px 0px; /* Bootstrap override */
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-long-caption-container {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-long-caption-container {
     float: left; 
     min-height: 48px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-long-caption-container h1 {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-long-caption-container h1 {
     color: #5E5E5E !important;
     line-height: 16.5px !important;
     font-family: Arial, Helvetica, sans-serif !important;
@@ -502,11 +520,11 @@
     font-weight: bold !important;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-long-caption-container p {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-long-caption-container p {
     margin: 0px;
 }
 
-#txTemplateDesignerContainer .ui-menu div.large-menu-item-long-caption-container p:last-child {
+#txTemplateDesignerContainer .txui-menu div.large-menu-item-long-caption-container p:last-child {
     margin-bottom: 2px !important;
     color: #5E5E5E !important;
     display: block;
@@ -516,15 +534,16 @@
     text-align: left !important;
 }
 
-#txTemplateDesignerContainer .ui-menu div.small-menu-item-caption-container {
+#txTemplateDesignerContainer .txui-menu div.small-menu-item-caption-container {
     float: left; 
     padding-left: 5px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#txTemplateDesignerContainer .ui-menu div.small-menu-item-caption-container p {
+#txTemplateDesignerContainer .txui-menu div.small-menu-item-caption-container p {
     margin-top: 3px;
     margin-bottom: 3px;
+	 cursor: default;
 }
 
 #txTemplateDesignerContainer #tabFile {
@@ -545,27 +564,31 @@
 #txTemplateDesignerContainer select,
 .txDialog select {
     padding: .5px;
-    /* width: 140px; */
     margin: 0;
     background: white;
-    /* color: #5E5E5E; */
     border: 1px solid #ABABAB;
     outline: none;
     display: inline-block;
     cursor: pointer;
-	 font-size: 13px;
-	 /* max-height: 20px; */
+}
+
+#txTemplateDesignerContainer select {
+	font-size: 13px;
+}
+
+.txDialog select {
+	font-size: 12px;
 }
 
 #txTemplateDesignerContainer select:not([size]),
 .txDialog select:not([size]) {
-	 max-height: 20px;
+	max-height: 20px;
 }
 
 /* CSS for icons */
 
-#txTemplateDesignerContainer div.ui-state-disabled,
-.txDialog div.ui-state-disabled {
+#txTemplateDesignerContainer div.txui-state-disabled,
+.txDialog div.txui-state-disabled {
     color: gray; /* style for disabled ribbon bar controls */
     pointer-events: none;
 }
@@ -737,7 +760,7 @@
     width: 26px;
 }
 
-#txTemplateDesignerContainer #insertSymbolDropDown li.ui-menu-item a {
+#txTemplateDesignerContainer #insertSymbolDropDown li.txui-menu-item a {
     font-size: 12pt;
     height: 26px; 
     width: 26px; 
@@ -770,6 +793,7 @@
 	 color: initial;
 	 padding: 1px 0px;
 	 margin: initial;
+	 font-size: 12px;
 }
 
 .txDialog input[type=file] {
@@ -806,17 +830,17 @@
 /* Fiddling with "insert merge field" dropdown menu items. 
    ToDo: Try to simplify / generalize this some day. */
 
-#txTemplateDesignerContainer .tableDropDown > li > a > .ui-icon {
+#txTemplateDesignerContainer .tableDropDown > li > a > .txui-icon {
     margin-top: 10px;
 }
 
-#txTemplateDesignerContainer .tableDropDown > li.ui-menu-item > a {
+#txTemplateDesignerContainer .tableDropDown > li.txui-menu-item > a {
     overflow:hidden;
 }
 
 /* Sliders */
 
-#txTemplateDesignerContainer div.ui-slider {
+#txTemplateDesignerContainer div.txui-slider {
     border-radius: 0px;
     position: relative;
     /* margin: auto; */
@@ -824,21 +848,21 @@
     border: none;
 }
 
-#txTemplateDesignerContainer .ui-slider .ui-slider-handle {
+#txTemplateDesignerContainer .txui-slider .txui-slider-handle {
     border: none;
     border-radius: 0px;
     background: #cdcdcd;
 }
 
-#txTemplateDesignerContainer .ui-slider .ui-slider-handle:hover {
+#txTemplateDesignerContainer .txui-slider .txui-slider-handle:hover {
     background: #a6a6a6;
 }
 
-#txTemplateDesignerContainer .ui-slider .ui-slider-handle:active {
+#txTemplateDesignerContainer .txui-slider .txui-slider-handle:active {
     background: #606060;
 }
 
-#txTemplateDesignerContainer .ui-slider .ui-slider-handle:focus {
+#txTemplateDesignerContainer .txui-slider .txui-slider-handle:focus {
     outline: none;
 }
 
@@ -963,7 +987,7 @@
 
 /* DIALOGS */
 
-div.ui-dialog {
+div.txui-dialog {
     padding: 0px;
     border-radius: 0px;
     font-size: 10pt;
@@ -971,12 +995,12 @@ div.ui-dialog {
     background: #fbfbfb;
 }
 
-div.ui-dialog * {
+div.txui-dialog * {
     line-height: normal;    /* Bootstrap override */
     box-sizing: content-box !important; /* Bootstrap override */
 }
 
-div.ui-dialog div.ui-dialog-titlebar { 
+div.txui-dialog div.txui-dialog-titlebar { 
     font-size: 12px; 
     font-weight: normal; 
     text-align: center;
@@ -987,7 +1011,7 @@ div.ui-dialog div.ui-dialog-titlebar {
     background: transparent;
 }
 
-div.ui-dialog-titlebar button.ui-dialog-titlebar-close {
+div.txui-dialog-titlebar button.txui-dialog-titlebar-close {
     background: #c75050;
     border: none;
     top: 0;
@@ -995,15 +1019,15 @@ div.ui-dialog-titlebar button.ui-dialog-titlebar-close {
     width: 30px;
 }
 
-div.ui-dialog-titlebar button.ui-dialog-titlebar-close:hover {
+div.txui-dialog-titlebar button.txui-dialog-titlebar-close:hover {
     background: #e04343;
 }
 
-div.ui-dialog-titlebar button.ui-dialog-titlebar-close span.ui-icon {
+div.txui-dialog-titlebar button.txui-dialog-titlebar-close span.txui-icon {
     background-image: url(images/ui-icons_ffffff_256x240.png);
 }
 
-div.ui-dialog div.ui-dialog-content {
+div.txui-dialog div.txui-dialog-content {
     font-size: 12px; 
     border-top: 1px solid #dddddd;
     border-left: 1px solid #dddddd;
@@ -1016,23 +1040,23 @@ div.ui-dialog div.ui-dialog-content {
     background: #f0f0f0;
 }
 
-div.ui-dialog-content input[type=text], 
-div.ui-dialog-content input[type=password], 
-div.ui-dialog-content textarea {
+div.txui-dialog-content input[type=text], 
+div.txui-dialog-content input[type=password], 
+div.txui-dialog-content textarea {
     border: 1px solid gray;
 }
 
-div.ui-dialog-content input[type=text]:focus,
-div.ui-dialog-content input[type=password]:focus, 
-div.ui-dialog-content textarea:focus {
+div.txui-dialog-content input[type=text]:focus,
+div.txui-dialog-content input[type=password]:focus, 
+div.txui-dialog-content textarea:focus {
     border: 1px solid #569de5;
 }
 
-div.ui-dialog-content span input {
+div.txui-dialog-content span input {
     border: none;
 }
 
-div.ui-dialog-content label {
+div.txui-dialog-content label {
     display: block;
     /* clear: right; */
     /* font-size: 1em; */
@@ -1042,32 +1066,32 @@ div.ui-dialog-content label {
     font-weight: normal;    /* Bootstrap override */
 }
 
-div.ui-dialog-content fieldset {
+div.txui-dialog-content fieldset {
     margin: 4px 2px;
     border: 1px solid lightgray;
     padding: 0.35em 0.75em 0.625em 0.75em;  /* Bootstrap override */
 }
 
-div.ui-dialog-content select {
+div.txui-dialog-content select {
     background-color: white;
     border: 1px solid gray;
 }
-div.ui-dialog-content td,
-div.ui-dialog-content th {
-    padding: 1px;   /* Bootstrap override */
+div.txui-dialog-content td,
+div.txui-dialog-content th {
+    padding: 1px !important;   /* Bootstrap override */
 }
 
-div.ui-dialog-content table {
-    border-spacing: 2px;    /* Bootstrap override */
+div.txui-dialog-content table {
+    border-spacing: 2px !important;    /* Bootstrap override */
 }
 
-.txDialog div.ui-tabs {
+.txDialog div.txui-tabs {
     padding: 0;
     border: none;
     background: transparent;
 }
 
-.txDialog div.ui-tabs .ui-tabs-nav { 
+.txDialog div.txui-tabs .txui-tabs-nav { 
     background-color: transparent; 
     background-image: none;
     border-left: none;
@@ -1075,13 +1099,13 @@ div.ui-dialog-content table {
     border-right: none;
 }
 
-.txDialog div.ui-tabs div.ui-tabs-panel {
+.txDialog div.txui-tabs div.txui-tabs-panel {
     border-left: 1px solid #aaaaaa;
     border-bottom: 1px solid #aaaaaa;
     border-right: 1px solid #aaaaaa;
 }
 
-div.ui-dialog div.ui-dialog-buttonpane {
+div.txui-dialog div.txui-dialog-buttonpane {
     border-top: none;
     border-left: 1px solid #dddddd;
     border-bottom: 1px solid #dddddd;
@@ -1095,32 +1119,32 @@ div.ui-dialog div.ui-dialog-buttonpane {
     padding: 0px 3px 3px 0px;
 }
 
-.ui-corner-all, .ui-corner-bottom {
+.txui-corner-all, .txui-corner-bottom {
     border-radius: 0;
 }
 
-div.ui-dialog-buttonset button.ui-button {
+div.txui-dialog-buttonset button.txui-button {
     border: 1px solid #acacac;
     background: #e5e5e5;
     min-width: 70px;
 }
 
-div.ui-dialog-buttonset button.ui-button:hover {
+div.txui-dialog-buttonset button.txui-button:hover {
     border: 1px solid #7eb4ea;
     background: #e3f0fc;
 }
 
-.txDialog .ui-tabs-active a {
+.txDialog .txui-tabs-active a {
     outline: none;
 }
 
-button.ui-button span.ui-button-text {
+button.txui-button span.txui-button-text {
     font-size: 12px;
     /* color: #5E5E5E; */
     padding: 5px 9px 5px 9px;
 }
 
-.no-close .ui-dialog-titlebar-close {
+.no-close .txui-dialog-titlebar-close {
   display: none;
 }
 
@@ -1168,7 +1192,7 @@ body ul.contextMenu a[role=menuitem] > span {
     margin-top: 3px;
 }
 
-.ui-widget-overlay {
+.txui-widget-overlay {
     background: none !important;
     background-image: none !important;
 }
@@ -1220,7 +1244,7 @@ body ul.contextMenu a[role=menuitem] > span {
     cursor: default;
 }
 
-#txTemplateDesignerContainer .ui-widget-content a {
+#txTemplateDesignerContainer .txui-widget-content a {
     color: #5E5E5E !important;
 }
 
@@ -1248,13 +1272,31 @@ body ul.contextMenu a[role=menuitem] > span {
     left: -9999px;
 }
 
-#insertShapesDropDown a > span.ui-menu-icon,
-#shapeOutlineDropDown a > span.ui-menu-icon {
+#insertShapesDropDown a > span.txui-menu-icon,
+#shapeOutlineDropDown a > span.txui-menu-icon {
    margin-top: 3px;
 }
 
-#txTemplateDesignerContainer #fileMenu {
-	cursor: default;
+/* "Insert Table Wizard" grid */
+
+#txTemplateDesignerContainer .txInsertTableWizard {
+	background-color: white;
+}
+
+#txTemplateDesignerContainer .txInsertTableWizard table {
+	border-spacing: 3px;
+	border-collapse: separate;
+}
+
+#txTemplateDesignerContainer .txInsertTableWizard td {
+	width: 20px;
+	height: 11px;
+	border: 1px solid #646464;
+}
+
+#txTemplateDesignerContainer .txInsertTableWizard td.glowing {
+	background-color: #ffdd9a;
+	border-color: orange;
 }
 
 .txHiddenTextField {
@@ -1276,4 +1318,79 @@ body ul.contextMenu a[role=menuitem] > span {
 
 .txHiddenTextField:focus {
 	outline: none;
+}
+
+#txTemplateDesignerContainer .tblRibbonGrpLayout {
+	border-collapse: collapse; 
+	border: none;
+	font-size: 11px !important;
+}
+
+#txTemplateDesignerContainer .tblRibbonGrpLayout label {
+	font-size: 11px !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	font-weight: 400;
+}
+
+#txTemplateDesignerContainer .tblRibbonGrpLayout input[type=number] {
+	width: 50px;
+	height: 15px;
+}
+
+#txTemplateDesignerContainer .tblRibbonGrpLayout input[type=number]:invalid {
+	box-shadow: none;
+}
+
+#txTemplateDesignerContainer .ribbon-group img.txDialogLauncher {
+	position: absolute;
+	margin-bottom: 1px;
+	margin-right: 1px;
+	opacity: 0.6;
+	transition: opacity 0.3s;
+}
+
+#txTemplateDesignerContainer .ribbon-group img.txDialogLauncher:hover {
+	background-color: #D5E1F2;
+	opacity: 1;
+}
+
+#txTemplateDesignerContainer .ribbon-group img.txDialogLauncher:active {
+	background-color: #A3BDE3;
+	opacity: 1;
+}
+
+#txTemplateDesignerContainer #fileMenu {
+	cursor: default;
+}
+
+#txTemplateDesignerContainer #paperSizesDropDown li.menu-item-selected {
+	background-color: #C2D5F2;
+}
+
+#txTemplateDesignerContainer .ribbon-group .ribbon-button-wrapper-small-stacked-buttons .ribbon-stacked-toggle-button {
+	margin: 0pt;
+	padding: 0pt;
+}
+
+#txTemplateDesignerContainer .ribbon-group .ribbon-button-wrapper-small-stacked-buttons .ribbon-stacked-toggle-button .ribbon-button-small-label-container {
+	margin-top: 5px;
+}
+
+#txTemplateDesignerContainer #ribbonGroupFrameSize div.ribbon-group-content,
+#txTemplateDesignerContainer #ribbonGroupFrameProps div.ribbon-group-content {
+	height: 55px;
+}
+
+#txTemplateDesignerContainer #tblRibbonGrpFrameSize,
+#txTemplateDesignerContainer #tblRibbonGrpFrameProps {
+	margin-top: 10px;
+}
+
+#txTemplateDesignerContainer #tblRibbonGrpFrameSize img,
+#txTemplateDesignerContainer #tblRibbonGrpFrameProps img {
+	margin-right: 5px;
+}
+
+#txTemplateDesignerContainer #tblRibbonGrpFrameProps input {
+	width: 80px;
 }

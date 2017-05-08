@@ -31,12 +31,15 @@
 <div class="ribbon-group" id="ribbonGroupTables">
 	<div class="ribbon-group-content">
 		<!-- Tables button -->
-		<div class="ribbon-button ribbon-button-big" id="btnInsertTable">
+		<div class="ribbon-button ribbon-button-big" id="drpDnBtnInsertTable">
 			<div class="ribbon-button-big-image-container">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/table.png">
 			</div>
 			<div class="ribbon-button-big-label-container">
-				<p class="ribbon-button-label"><!-- Table --></p>
+				<p class="ribbon-button-label">
+					<span class="ribbon-button-label-text"><!-- Table<br/> --></span>
+					<span class="drop-down-arrow-large">▼</span>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -243,6 +246,38 @@
 <!-------------------------------------------------------------------------------------------->
 <!-- DROPDOWN MENUS -->
 <!-------------------------------------------------------------------------------------------->
+<!-- "Insert Table" dropdown menu -->
+<ul id="insertTableDropDown" class="dropDownMenu">
+	<!-- 10x8 table size selection grid -->
+	<li id="mnuItemTableWizard">
+		<a>
+			<div class="menu-item-category-header">
+				<h1>
+					<span class="txTblWizHdrFirstPart"><!-- Insert Table --></span>
+					<span class="txTblWizHdrSecondPart"><!-- XxY --></span>
+				</h1>
+				<div class="txInsertTableWizard">
+					<table id="txInsertTableGrid">
+						<!-- 10 x 8 grid is generated programmatically -->
+					</table>
+				</div>
+			</div>
+		</a>
+	</li>
+	<!-- "Insert Table Dialog" menu item -->
+	<li id="mnuItemInsertTable">
+		<a style="border-top: 1px solid lightgray">
+			<div class="large-menu-item-image-container-long-caption">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/table.png">
+			</div>
+			<div class="large-menu-item-long-caption-container">
+				<h1><!-- Insert Table --></h1>
+				<p><!-- Opens a dialog to insert... --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
 <!-- Image dropdown menu -->
 <ul id="insertImageDropDown" class="dropDownMenu">
 	<!-- Image -->
@@ -521,7 +556,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItemDeleteHyperlink" class="ui-state-disabled">
+	<li id="mnuItemDeleteHyperlink" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/deletehyperlink.png">
@@ -532,7 +567,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItemEditHyperlink" class="ui-state-disabled">
+	<li id="mnuItemEditHyperlink" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/edithyperlink.png">
@@ -606,7 +641,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItemRemoveHeader" class="ui-state-disabled">
+	<li id="mnuItemRemoveHeader" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/deleteheader.png">
@@ -632,7 +667,7 @@
 			</div>
 		</a>
 	</li>
-	<li id="mnuItemRemoveFooter" class="ui-state-disabled">
+	<li id="mnuItemRemoveFooter" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/deletefooter.png">
@@ -647,7 +682,7 @@
 
 <!-- Page number dropdown menu -->
 <ul id="insertPageNumberDropDown" class="dropDownMenu">
-	<li id="mnuItemInsertPageNum" class="ui-state-disabled">
+	<li id="mnuItemInsertPageNum" class="txui-state-disabled">
 		<a>
 			<div class="large-menu-item-image-container-long-caption">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/large_32bit/insertpagenumber.png">

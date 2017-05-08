@@ -111,7 +111,7 @@
 <div class="ribbon-group" id="ribbonGroupTblLayoutMerge">
 	<div class="ribbon-group-content">
 		<!-- "Merge Cells" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="btnMergeCells">
+		<div class="ribbon-button ribbon-button-big txui-state-disabled" id="btnMergeCells">
 			<div class="ribbon-button-big-image-container">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/mergetablecells.png">
 			</div>
@@ -121,7 +121,7 @@
 		</div>
 
 		<!-- "Split Cells" button -->
-		<div class="ribbon-button ribbon-button-big ui-state-disabled" id="btnSplitCells">
+		<div class="ribbon-button ribbon-button-big txui-state-disabled" id="btnSplitCells">
 			<div class="ribbon-button-big-image-container">
 				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/splittablecells.png">
 			</div>
@@ -148,6 +148,71 @@
 	<div class="ribbon-group-label-container">
 		<p class="ribbon-group-label"><!-- Merge --></p>
 	</div>
+</div>
+
+<!-- "Frames & Background" group -->
+
+<div class="ribbon-group" id="ribbonGroupTblFramesAndBg">
+	<div class="ribbon-group-content">
+
+		<!-- "Frames" button -->
+		<div class="ribbon-button ribbon-button-big" id="drpDnBtnTableFrames">
+			<div class="ribbon-button-big-image-container">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-big-image" data-orig-src="Icons/large_32bit/tableborderbox.png">
+			</div>
+			<div class="ribbon-button-big-label-container">
+				<p class="ribbon-button-label">
+					<span class="ribbon-button-label-text"><!-- Frames<br /> --></span>
+					<span class="drop-down-arrow-large">▼</span>
+				</p>
+			</div>
+		</div>
+
+		<div class="ribbon-button-wrapper-small-stacked-buttons">
+			<!-- "Line Color" button -->
+			<div class="ribbon-button ribbon-button-small" id="drpDnBtnTblLineColor">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/tablelinecolor.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label">
+						<span class="ribbon-button-label-text"><!-- Line Color --></span>
+						<span class="drop-down-arrow-large">▼</span>
+					</p>
+				</div>
+			</div>
+
+			<!-- "Background Color" button -->
+			<div class="ribbon-button ribbon-button-small" id="drpDnBtnTblBgColor">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/paragraphbackcolor.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label">
+						<span class="ribbon-button-label-text"><!-- Background Color --></span>
+						<span class="drop-down-arrow-large">▼</span>
+					</p>
+				</div>
+			</div>
+
+			<!-- "Line Width" button -->
+			<div class="ribbon-button ribbon-button-small" id="drpDnBtnTblLineWidth">
+				<div class="ribbon-button-small-image-container">
+					<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="ribbon-button-small-image" data-orig-src="Icons/small_32bit/tablelinewidth.png">
+				</div>
+				<div class="ribbon-button-small-label-container">
+					<p class="ribbon-button-label">
+						<span class="ribbon-button-label-text"><!-- Line Width --></span>
+						<span class="drop-down-arrow-large">▼</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ribbon-group-label-container">
+		<p class="ribbon-group-label"><!-- Frames & Background --></p>
+	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchTblFrmsAndBgGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-- "Alignment" group -->
@@ -196,6 +261,7 @@
 	<div class="ribbon-group-label-container">
 		<p class="ribbon-group-label"><!-- Alignment --></p>
 	</div>
+	<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" class="txDialogLauncher" id="btnDlgLnchTblAlignGrp" width="16" height="16" style="opacity: 0" data-orig-src="Icons/small_32bit/dialoglauncher.svg">
 </div>
 
 <!-------------------------------------------------------------------------------------------->
@@ -334,3 +400,230 @@
 	</li>
 </ul>
 
+<!-- Table frames dropdown menu -->
+<ul id="tableFramesDropDown" class="dropDownMenu">
+	<li id="mnuItemTblFrameLeft">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameLeft">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderleft.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Left --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameTop">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameTop">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/bordertop.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Top --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameRight">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameRight">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderright.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Right --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameBottom">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameBottom">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbottom.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Bottom --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameOutside">
+		<a style="border-top: 1px solid lightgray">
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameOutside">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderbox.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Outside Borders --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameAll">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameAll">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderall.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- All Borders --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameInsideHor">
+		<a style="border-top: 1px solid lightgray">
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameInsideHor">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderinnerhor.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Inside horizontal Border --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameInsideVert">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameInsideVert">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/borderinnervert.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Inside vertical Border --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!-- Line color dropdown menu -->
+<ul id="tableFrameLineColorDropDown" class="dropDownMenu">
+	<li id="mnuItemTblFrameColorAutomatic" style="border-bottom: 1px solid lightgray">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameColorAutomatic">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="Menu Item Image" data-orig-src="Icons/small_32bit/autoforecolor.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Automatic --></p>
+			</div>
+		</a>
+	</li>
+	<!-- Color picker is generated programmatically -->
+	<li id="mnuItemTblFrameMoreColors" style="border-top: 1px solid lightgray">
+		<a>
+			<div class="small-menu-item-image-wrapper">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="Menu Item Image" data-orig-src="Icons/small_32bit/colordialog.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- More Colors… --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!-- Background color dropdown menu -->
+<ul id="tableFrameFillColorDropDown" class="dropDownMenu">
+	<li id="mnuItemTblFrameFillColorAutomatic" style="border-bottom: 1px solid lightgray">
+		<a>
+			<div class="ribbon-button ribbon-button-tiny" id="tglBtnTblFrameFillColorAutomatic">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="Menu Item Image" data-orig-src="Icons/small_32bit/autobackcolor.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- Automatic --></p>
+			</div>
+		</a>
+	</li>
+	<!-- Color picker is generated programmatically -->
+	<li id="mnuItemTblFrameFillMoreColors" style="border-top: 1px solid lightgray">
+		<a>
+			<div class="small-menu-item-image-wrapper">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" alt="Menu Item Image" data-orig-src="Icons/small_32bit/colordialog.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- More Colors… --></p>
+			</div>
+		</a>
+	</li>
+</ul>
+
+<!-- Frame Line width dropdown menu -->
+<ul id="tableFrameLineWidthDropDown" class="dropDownMenu">
+	<li id="mnuItemTblFrameLineWidth_0_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_0_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight025.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_0_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_0_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight050.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_0_75">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_0_75">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight075.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 0.75 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_1_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_1_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight100.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_1_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_1_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight150.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 1.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_2_25">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_2_25">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight225.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 2.25 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_3_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_3_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight300.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 3.0 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_4_5">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_4_5">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight450.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 4.5 --></p>
+			</div>
+		</a>
+	</li>
+	<li id="mnuItemTblFrameLineWidth_6_0">
+		<a>
+			<div class="small-menu-item-image-wrapper" id="tglBtnTblFrameLineWidth_6_0">
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNgYAAAAAMAASsJTYQAAAAASUVORK5CYII=" data-orig-src="Icons/small_32bit/shapeoutlineweight600.png">
+			</div>
+			<div class="small-menu-item-caption-container">
+				<p><!-- 6.0 --></p>
+			</div>
+		</a>
+	</li>
+</ul>
